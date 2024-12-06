@@ -2,7 +2,10 @@ import { useState } from 'react'
 
 import './App.css'
 import Navbar from './components/Navbar'
-// import HeroSection from './components/HeroSection'
+import Footer from './components/Footer'
+import HeroSection from './components/Herosection'
+import Categories from './components/Categories'
+
 
 function App() {
  
@@ -11,7 +14,9 @@ function App() {
     <div className='w-full'>
     
      <Navbar />
-     {/* <HeroSection /> */}
+    <HeroSection />
+    <Categories />
+     <Footer />
 
     </div>
   )
