@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HeroSection from './components/Herosection'
 import Categories from './components/Categories'
+import TopRestaurants from './components/TopRestaurant'
+import MobileApp from './components/MobileApp'
 
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
      <Navbar />
     <HeroSection />
     <Categories />
+    <TopRestaurants />
+
+    <MobileApp />
      <Footer />
 
     </div>

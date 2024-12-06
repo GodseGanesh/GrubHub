@@ -6,9 +6,10 @@ function HeroSearchInput() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 p-6 rounded-lg shadow-md">
       <h1 className="text-2xl font-bold mb-4">Find Delicious Food Near You</h1>
-      <div className="flex w-full ">
+      <div className="w-full max-w-4xl mx-auto flex flex-wrap gap-4">
+        {/* Dropdown */}
         <select
-          className="border rounded-md p-2 w-1/4 bg-white text-gray-700"
+          className="border rounded-md p-2 w-full sm:w-1/4 bg-white text-gray-700"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         >
@@ -19,32 +20,28 @@ function HeroSearchInput() {
           <option value="San Francisco">San Francisco</option>
           <option value="Chicago">Chicago</option>
         </select>
-        <div className="flex flex-grow items-center border rounded-md px-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 16l-4-4m0 0l4-4m-4 4h16"
-            />
-          </svg>
+
+        {/* Input with Icon */}
+        <div className="flex flex-grow items-center border rounded-md  w-full sm:w-auto">
           <input
             type="text"
             placeholder="Search for food or restaurants"
             className="flex-grow p-2 outline-none"
           />
         </div>
-        <button className="bg-pink-700 text-white px-4 py-2 rounded-md hover:bg-orange-600">
-          Order Now
-        </button>
+
+        {/* Button */}
+        <div className="relative inline-block mx-auto">
+          <button className="relative px-4 py-2 bg-pink-700 text-white font-semibold text-md rounded-md overflow-hidden shadow-md group">
+            <span className="absolute inset-0 bg-white transition-all duration-500 group-hover:left-0 group-hover:w-full w-0"></span>
+            <span className="relative z-10 group-hover:text-pink-700 transition-all duration-300">
+              ORDER NOW
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
 export default HeroSearchInput;

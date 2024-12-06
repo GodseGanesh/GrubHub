@@ -20,8 +20,9 @@ function Categories() {
       ];
     
       return (
-        <div className="bg-gray-100 py-10 p-10">
+        <div className="bg-gray-50 py-8 p-5 md:py-10 md:p-10 mt-5">
           <h2 className="text-3xl font-bold text-center mb-8 text-teal-900">Explore Categories</h2>
+          <div className="flex flex-wrap gap-3">
           <Swiper
             modules={[Navigation,Autoplay]}
             navigation
@@ -32,11 +33,13 @@ function Categories() {
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 4 },
-              1024: { slidesPerView: 6 },
+              320: { slidesPerView: 2 }, // Show 2 slides on very small screens
+              480: { slidesPerView: 3 }, // Show 3 slides on small screens
+              768: { slidesPerView: 4 }, // Show 4 slides on tablets
+              1024: { slidesPerView: 6 }, // Show 6 slides on larger screens
             }}
           >
+            
             {categories.map((category, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -45,7 +48,9 @@ function Categories() {
                 </div>
               </SwiperSlide>
             ))}
+           
           </Swiper>
+          </div>
         </div>
       );
     };
