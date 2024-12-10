@@ -7,6 +7,7 @@ import HeroSection from './components/Herosection'
 import Categories from './components/Categories'
 import TopRestaurants from './components/TopRestaurant'
 import MobileApp from './components/MobileApp'
+import Offers from './components/Offers'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <TopRestaurants />
 
     <MobileApp />
+    <Offers />
      <Footer />
 
     </div>
